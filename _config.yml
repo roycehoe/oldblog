@@ -19,7 +19,6 @@ author:
 url: "https://roycehoe.github.io" #
 baseurl: "" # leave blank if not wishd
 date_format: "%b %-d, %Y"
-permalink: "https://powex.ml/Gesko/"
 permalink: pretty 
 
 
