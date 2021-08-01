@@ -168,9 +168,12 @@ a {
 	margin: 1rem 0;
 }
 
-.meta {
-	margin: 1.4rem 0;
-
+meta {
+	margin-top: 0rem;
+    margin-right: 0px;
+    margin-bottom: 1.5rem;
+    margin-left: 0px;
+    font-weight: normal;
 }
 
 code,
@@ -232,10 +235,6 @@ header a.active {
 header,
 section {
 	padding: 1rem 0;
-}
-
-section {
-	margin-top: 5.5rem;
 }
 
 blockquote {
