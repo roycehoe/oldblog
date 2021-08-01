@@ -168,12 +168,17 @@ a {
 	margin: 1rem 0;
 }
 
-meta {
-	margin-top: 0rem;
-    margin-right: 0px;
+.meta {
+    display: flex;
+
+    a {
+    margin-top: 0rem;
+    margin-right: 10px;
     margin-bottom: 1.5rem;
     margin-left: 0px;
     font-weight: normal;
+    background-color: var(--code-bg-color);
+    }
 }
 
 code,
