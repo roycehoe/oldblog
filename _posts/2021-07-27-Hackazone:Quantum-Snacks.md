@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Hacky Holidays - Space Race: Quantum Snacks"
+tag: [quantum]
+---
+
 # Quantum Snacks
 
 ### **challenge information**

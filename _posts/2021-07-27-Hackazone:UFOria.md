@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Hacky Holidays - Space Race: UFOria"
+tag: [web, osint]
+---
+
 ### Description
 
 Note: this is a challenge with intentionally vulnerable systems and applications, in which you are allowed to find vulnerabilities. For more information click [here.](https://portal.hackazon.org/resources/security-policy.html)

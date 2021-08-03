@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hacky Holidays - Space Race: Unidentifi3d-Flying-Object"
-tag: ["reverse engineering", "something"]
+tag: [steg]
 ---
 
 # Description
