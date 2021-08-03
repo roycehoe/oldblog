@@ -5,17 +5,13 @@ tag: [steg]
 ---
 
 # Description
----
-
-[Printer] - 30 points
+[Printer] - 30 points  
 The UFO was forged on one of the universe's most advanced printers - do you know which make and model? Enter the answer as `Make Model`.
 
-[Layer by Layer] - 70 points
+[Layer by Layer] - 70 points  
 Do you know how GCode files work? Maybe you can find a hidden message along the layers. Flag format: CTF{answer}
 
----
 # Introduction
----
 Well, what do we have here? The file I am given is called `unidentifi3d.gcode`. But first, what even is a `.gcode`?
 
 Phew, turns out that [it isn't some challenge-specific code](https://en.wikipedia.org/wiki/G-code); it is code used in [manufacturing](https://en.wikipedia.org/wiki/Computer-aided_manufacturing). An important snippet from [this article](https://howtomechatronics.com/tutorials/g-code-explained-list-of-most-important-g-code-commands/):
@@ -24,9 +20,8 @@ Phew, turns out that [it isn't some challenge-specific code](https://en.wikipedi
 
 Great! My first guess is that this `gcode` would "draw" out the flag for me.
 
----
 # Solving the challenge: Part 1
----
+
 After a little Googling, I found [this website](https://gcode.ws/) that can help read this code. Dumping the code in the website gave me this weird drawing:
 ![Unidentifi3d%20Flying%20Object%209005dd557a584ec9a532e1b7f72d94e7/Untitled.png](/images/Unidentifi3d-Flying-Object-images/pyramid.png)
 At the bottom of the page, there are sliders. Sliding back and forth, I catch a glimpse of this:
