@@ -100,9 +100,10 @@ html[data-theme="dark"] {
 	--medium-text-color: #52057b;
 	--main-text-color: #EAEAEA;
 	--dark-text-color: rgb(36, 38, 42);
-	--link-color: rgb(255, 89, 125);
-	--code-bg-color: rgb(36, 38, 42);
-	background-color: rgb(19, 20, 24);
+	--link-color: rgb(79, 188, 255);
+	--code-bg-color: rgb(42, 42, 42);
+	--tag-color: rgb(255, 97, 79);
+	background-color: rgb(35, 35, 35);
 
 	#theme-toggle div {
 		position: relative;
@@ -178,8 +179,10 @@ a {
     margin-bottom: 0rem;
     margin-left: 0px;
     font-weight: normal;
+    color: var(--tag-color);
     background-color: var(--code-bg-color);
     font-size: 0.8rem;
+    font-family: "Iosevka Regular", monospace;
     border-radius: 3px;
     padding-right: 10px;
     padding-left: 10px;
@@ -189,14 +192,14 @@ a {
 code,
 pre {
 	background: var(--code-bg-color);
-	margin: 0 -27px;
 	border-width: 1px;
+    font-family: "Iosevka Regular", monospace;
 }
 
 code {
 	margin: unset;
 	padding: 0.1rem;
-	color: var(--light-text-color);
+	color: var(--tag-color);
 }
 
 pre code {
@@ -208,8 +211,8 @@ pre {
 	border-width: 3px;
 	padding: 0.8rem;
 	white-space: pre-wrap;
-	border-style: none none none solid;
-	border-color: var(--light-text-color);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 img {
@@ -217,9 +220,11 @@ img {
 }
 
 hr {
-	background: var(--light-text-color);
-	height: 1px;
+	background: var(--code-bg-color);
+	height: 5px;
 	border: 0;
+    margin-top: 1.4re;
+    margin-bottom: 1.4rem;
 }
 
 header {
@@ -254,19 +259,19 @@ section {
 
 blockquote {
 	font-style: italic;
-	border-left: 5px solid var(--dark-text-color);
+	border-left: 5px solid var(--code-bg-color);
 	padding-left: 1rem;
+    line-height: 3rem;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
 h1 {
 	color: var(--main-text-color);
-	text-transform: uppercase;
 	font-size: larger;
 	font-weight: bold;
-	margin-top: 1.5rem;
-	margin-bottom: 0rem;
+	margin-top: 0.7rem;
+	margin-bottom: 0.3rem;
 }
 
 h2,
@@ -338,7 +343,7 @@ time {
 .post > h1.title {
 	font-size: x-large;
 	margin-top: 0;
-	margin-bottom: 0;
+	margin-bottom: 0.7rem;
     border-bottom: 0px;
     font-size: 2rem;
     line-height: normal;
@@ -384,6 +389,10 @@ main {
     }
   }
 }
+
+ul {
+  margin: 0 auto .8em 1.7em
+  }
 
 @media screen and (max-width: 45rem) {
 	header li {
