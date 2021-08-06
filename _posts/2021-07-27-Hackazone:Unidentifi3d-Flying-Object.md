@@ -23,9 +23,9 @@ Great! My first guess is that this `gcode` would "draw" out the flag for me.
 # Solving the challenge: Part 1
 
 After a little Googling, I found [this website](https://gcode.ws/) that can help read this code. Dumping the code in the website gave me this weird drawing:
-![Unidentifi3d%20Flying%20Object%209005dd557a584ec9a532e1b7f72d94e7/Untitled.png](/images/Unidentifi3d-Flying-Object-images/pyramid.png)
+![Unidentifi3d%20Flying%20Object%209005dd557a584ec9a532e1b7f72d94e7/Untitled.png](/images/Unidentifi3d-Flying-Object-images/pyramid.png)  
 At the bottom of the page, there are sliders. Sliding back and forth, I catch a glimpse of this:
-![Unidentifi3d%20Flying%20Object%209005dd557a584ec9a532e1b7f72d94e7/Untitled%201.png](/images/Unidentifi3d-Flying-Object-images/flag.png)
+![Unidentifi3d%20Flying%20Object%209005dd557a584ec9a532e1b7f72d94e7/Untitled%201.png](/images/Unidentifi3d-Flying-Object-images/flag.png)  
 I see the word `Flying_sau`. Lemme try `Flying_saucer`.
 
 Oh, unexpectedly worked. Looks like this is the key for the second part of the challenge.
@@ -34,9 +34,8 @@ Flag: CTF{Flying_saucer}
 
 Turns out, the sliders actually indicate layers of scaffolding. In simpler terms, 3D printers print objects by stacking layers upon layers till the object is created. One of the layers happened to be the flag. Now to solve the first part of the challenge.
 
----
 # Solving the challenge: Part 2
----
+
 The first challenge asks for the make and model. To summarise [this article](https://pediaa.com/difference-between-make-and-model/#:~:text=The%20main%20difference%20between%20make,about%20different%20types%20of%20products.):
 
 - Make: Who is the manufacturer of the product? [Apple]
