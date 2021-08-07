@@ -230,10 +230,8 @@ img {
 
 hr {
 	background: var(--code-bg-color);
-	height: 5px;
+	height: 1px;
 	border: 0;
-    margin-top: 1.4re;
-    margin-bottom: 1.4rem;
 }
 
 header {
@@ -262,7 +260,7 @@ section {
 }
 
 section {
-         margin-top: 5.5rem;
+         margin-top: 0rem;
 }
 
 
@@ -370,6 +368,7 @@ main {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+    margin-top: 5.5rem;
 }
 
 .social-footer {
@@ -505,7 +504,7 @@ color: #333;
   display: flex;
   position: relative;
   margin-top: 0;
-  border-top: 2px solid var(--light-text-color);
+  border-top: 2px solid var(--code-bg-color);
   line-height: 1.4;
 
   .post-nav-item {
