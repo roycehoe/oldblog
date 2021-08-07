@@ -390,9 +390,23 @@ main {
   }
 }
 
-ul {
-  margin: 0 auto .8em 1.7em
-  }
+ol>li, ul>li {
+    margin: 0 auto .8em 1.7em;
+}
+
+.list-post-title{
+    margin: 0rem
+}
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 45rem) {
 	header li {

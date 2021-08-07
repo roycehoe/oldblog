@@ -7,6 +7,7 @@ tag: [steg]
 # Description
 [Printer] - 30 points  
 The UFO was forged on one of the universe's most advanced printers - do you know which make and model? Enter the answer as `Make Model`.
+&nbsp;
 
 [Layer by Layer] - 70 points  
 Do you know how GCode files work? Maybe you can find a hidden message along the layers. Flag format: CTF{answer}
@@ -23,9 +24,13 @@ Great! My first guess is that this `gcode` would "draw" out the flag for me.
 # Solving the challenge: Part 1
 
 After a little Googling, I found [this website](https://gcode.ws/) that can help read this code. Dumping the code in the website gave me this weird drawing:
-![Unidentifi3d%20Flying%20Object%209005dd557a584ec9a532e1b7f72d94e7/Untitled.png](/images/Unidentifi3d-Flying-Object-images/pyramid.png)  
+
+![Unidentifi3d%20Flying%20Object%209005dd557a584ec9a532e1b7f72d94e7/Untitled.png](/images/Unidentifi3d-Flying-Object-images/pyramid.png)
+
 At the bottom of the page, there are sliders. Sliding back and forth, I catch a glimpse of this:
-![Unidentifi3d%20Flying%20Object%209005dd557a584ec9a532e1b7f72d94e7/Untitled%201.png](/images/Unidentifi3d-Flying-Object-images/flag.png)  
+
+![Unidentifi3d%20Flying%20Object%209005dd557a584ec9a532e1b7f72d94e7/Untitled%201.png](/images/Unidentifi3d-Flying-Object-images/flag.png)
+
 I see the word `Flying_sau`. Lemme try `Flying_saucer`.
 
 Oh, unexpectedly worked. Looks like this is the key for the second part of the challenge.
@@ -69,3 +74,4 @@ Side note: This may be the first flag I have found that actually contains a spac
 Another side note: I just want to acknowledge the little inside joke that the admins were trying to reference. Because who built the pyramids?
 
 ![Unidentifi3d%20Flying%20Object%209005dd557a584ec9a532e1b7f72d94e7/Untitled%202.png](/images/Unidentifi3d-Flying-Object-images/meme.png)
+

@@ -36,10 +36,13 @@ layout: default
 <section class="posts" id="Blog">
     <h2>BLOG</h2>
     <ul>
+        <span class="landing-page"</span>
         {% for post in site.posts %}
         <li>
-            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+            <a href="{{ site.baseurl }}{{ post.url }}"class="post-title">{{ post.title }}</a>
+            <span class="post-date"
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+            </span>
         </li>
         <dl>
             <span class="meta">
