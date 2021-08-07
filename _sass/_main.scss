@@ -230,10 +230,15 @@ img {
 
 hr {
 	background: var(--code-bg-color);
-	height: 5px;
+	height: 1px;
 	border: 0;
     margin-top: 1.4re;
     margin-bottom: 1.4rem;
+    display: flex;
+    position: relative;
+    margin-top: 0;
+    border-top: 1px solid var(--code-bg-color);
+    line-height: 1.4;
 }
 
 header {
@@ -262,7 +267,7 @@ section {
 }
 
 section {
-         margin-top: 5.5rem;
+         margin-top: 0rem;
 }
 
 
@@ -505,7 +510,7 @@ color: #333;
   display: flex;
   position: relative;
   margin-top: 0;
-  border-top: 2px solid var(--light-text-color);
+  border-top: 1px solid var(--code-bg-color);
   line-height: 1.4;
 
   .post-nav-item {
