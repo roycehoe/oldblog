@@ -99,10 +99,11 @@ html[data-theme="dark"] {
 	--light-text-color: #c4bbf0;
 	--medium-text-color: #52057b;
 	--main-text-color: #EAEAEA;
-	--dark-text-color: rgb(36, 38, 42);
-	--link-color: rgb(79, 188, 255);
-	--code-bg-color: rgb(42, 42, 42);
-	--tag-color: rgb(255, 97, 79);
+	--dark-text-color: #24262A;
+	--link-color: #4FBCFF;
+	--code-bg-color: #2A2A2A;
+	--tag-color: #ff614f;
+    --link-hover-color: #4fff92;
 	background-color: rgb(35, 35, 35);
 
 	#theme-toggle div {
@@ -163,7 +164,6 @@ body {
 a {
 	color: var(--link-color);
 	text-decoration: none;
-    hover: #4fff92;
 }
 
 .post p {
@@ -196,6 +196,9 @@ a {
     border-radius: 3px;
     padding-right: 10px;
     padding-left: 10px;
+    }
+    a:hover{
+    color: var(--tag-color);
     }
 }
 
@@ -383,6 +386,7 @@ main {
     .fa {
       font-size: 1.3rem;
       color: #a9a9a9;
+      margin: 0.5rem;
 
       &:hover {
         color: darken(#a9a9a9, 25%);
@@ -499,9 +503,10 @@ color: #333;
   li {
     text-align: left;
     list-style-type: none;
-    margin-left: 0rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    margin-left: 2.3rem;
     }
-  }
 }
 
 .post-nav {
@@ -799,4 +804,8 @@ $link-color: var(--link-color);
     z-index: 15;
     
   }
+}
+
+a:hover {
+    color: var(--link-hover-color)
 }
