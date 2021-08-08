@@ -2,6 +2,7 @@
 layout: post
 title:  "Hacky Holidays - Space Race: Quantum Snacks"
 tag: [quantum]
+usemathjax: True
 ---
 
 # Challenge Information
@@ -9,31 +10,90 @@ tag: [quantum]
 Computers speak the language of binary (zeros and ones), and every computer program is basically just applying logic gates (e.g NOT, OR, AND, XOR etc) to these bit to get a desired outcome. The important point here is to remember that a bit is a single variable that can have one of 2 values, either zero or one).
 
 Quantum computers speak a very different language. Instead of a bit we have a qubit (quantum bit), which can be represented as a two-dimensional vector. Classical bit 0 is equivalent to the qubit 
-![Quantum%20Snacks%2070b44c71164b4df1b99dbcb625bd03d3/Untitled.png](/images/Quantum-Snacks-images/Untitled.png), and the classical bit 1 is equivalent to the qubit ![Quantum%20Snacks%2070b44c71164b4df1b99dbcb625bd03d3/Untitled%201.png](/images/Quantum-Snacks-images/Untitled1.png), but there are many other qubit states that do not have a classical equivalence, which means that qubits can store much more information than classical bits. The goal of this challenge is to understand this concept better.
+$$
+    \begin{pmatrix}
+    1\\
+    0\\
+    \end{pmatrix}
+$$,
+and the classical bit 1 is equivalent to the qubit 
+$$
+    \begin{pmatrix}
+    0\\
+    1\\
+    \end{pmatrix}
+$$,
+but there are many other qubit states that do not have a classical equivalence, which means that qubits can store much more information than classical bits. The goal of this challenge is to understand this concept better.
 
 To change the state of a (q)bit we apply logic gates to it. In quantum computing logic gates are represented as matrices, and the outcome of this operation can be calculated by multiplying the logic gate (a matrix) with the initial qubit state (a vector). Mathematically it looks like this:
-
-![Quantum%20Snacks%2070b44c71164b4df1b99dbcb625bd03d3/Untitled%202.png](/images/Quantum-Snacks-images/Untitled2.png)
+$$
+    \begin{pmatrix}
+    a & b \\
+    c & d \\
+    \end{pmatrix}
+$$
+$$
+    \begin{pmatrix}
+    a & b \\
+    c & d \\
+    \end{pmatrix}
+$$
+$$=$$
+$$
+    \begin{pmatrix}
+    ax_1 + bx_2 \\
+    cx_1 + dx_1 \\
+    \end{pmatrix}
+$$
 
 In this challenge we limit ourselves to three 1-qubit logic gates:
 
-![Quantum%20Snacks%2070b44c71164b4df1b99dbcb625bd03d3/Untitled%203.png](/images/Quantum-Snacks-images/Untitled3.png)
+$$
+X = \begin{pmatrix}
+    0 & 1 \\
+    1 & 0 \\
+    \end{pmatrix}
+$$
+
+
+$$
+Z = \begin{pmatrix}
+    1 & 0\\
+    0 & -1\\
+    \end{pmatrix}
+$$
+
+
+$$
+H = \frac{1}{\sqrt2}
+    \begin{pmatrix}
+    1 & 1\\
+    1 & -1\\
+    \end{pmatrix}
+$$
 
 Note: in practice there are more logic gates that result in an infinite possible quantum states. Because we are only considering 3 specific logic gates then the number of states is finite.
 
----
+
 
 ### [50 points] Question 1: How many states?
-Considering only these 3 logic gates, and starting in the ![Quantum%20Snacks%2070b44c71164b4df1b99dbcb625bd03d3/Untitled%204.png](/images/Quantum-Snacks-images/Untitled4.png) state, how many states can the qubit have? Hint: Start applying the logic gates in random order. Drawing the result in x-y coordinates will greatly help you understand the result.\
-![Quantum%20Snacks%2070b44c71164b4df1b99dbcb625bd03d3/Untitled%205.png](/images/Quantum-Snacks-images/Untitled5.png)
+Considering only these 3 logic gates, and starting in the
+$$
+    \begin{pmatrix}
+    1\\
+    0\\
+    \end{pmatrix}
+$$
+state, how many states can the qubit have?  
+Hint: Start applying the logic gates in random order. Drawing the result in x-y coordinates will greatly help you understand the result.
 
 ---
 
-### Introduction: Part 1
+# Introduction: Part 1
 
 A tl;dr summary of the challenge information:
 
-1. There are 3 logic gates: X, Z and H.
+1. There are 3 logic gates: `X`, `Z` and `H`.
 2. Each logic gate has a 2x2 vector tied to it
 3. All states are represented by a 1x2 vector
 4. Passing a state through a logic gate, states may or may not change
@@ -43,7 +103,7 @@ As a disclaimer: I hate math. So, in the spirit of taking the easy way out, I fo
 
 ---
 
-### Solving the challenge: Part 1
+# Solving the challenge: Part 1
 
 Playing around with the logic gates, here's what I found. In plain English:
 
@@ -52,27 +112,104 @@ Playing around with the logic gates, here's what I found. In plain English:
 
 Now for the challenging part, `H`
 
-Since `H` is tricky mathematics, here's how I simplified it: I assume that inverse root 2 is equal to a variable `a`. From there, I calculate the result of passing something through `H` logic gate. From this, I see an interesting pattern.
+Since `H` is tricky mathematics, here's how I simplified it: I assume that $$\frac{1}{\sqrt2}$$ equal to a variable `a`. From there, I calculate the result of passing something through `H` logic gate. From this, I see an interesting pattern.
 
-If I pass (1,0) through `H` repeatedly:
+If I pass
+$$
+    \begin{pmatrix}
+    1\\
+    0\\
+    \end{pmatrix}
+$$
+through `H` repeatedly:
 
-1. I get (a, a)
-2. Next, I get (1,0)
-3. Next, I get (a, a) ad infinitum
+1. I get
+$$
+    \begin{pmatrix}
+    a\\
+    a\\
+    \end{pmatrix}
+$$
+2. Next, I get
+$$
+    \begin{pmatrix}
+    1\\
+    0\\
+    \end{pmatrix}
+$$
+3. Next, I get
+$$
+    \begin{pmatrix}
+    a\\
+    a\\
+    \end{pmatrix}
+$$
+ad infinitum
 
-If I pass (0,1) through `H` repeatedly:
+If I pass:
+$$
+    \begin{pmatrix}
+    0\\
+    1\\
+    \end{pmatrix}
+$$ through `H` repeatedly
 
-1. I get (a, -a)
-2. Next, I get (0, 1)
-3. Next, I get (a, -a) ad infinitum
+1. I get
+$$
+    \begin{pmatrix}
+    a\\
+    -a\\
+    \end{pmatrix}
+$$
+2. Next, I get
+$$
+    \begin{pmatrix}
+    0\\
+    1\\
+    \end{pmatrix}
+$$
+3. Next, I get
+$$
+    \begin{pmatrix}
+    a\\
+    -a\\
+    \end{pmatrix}
+$$ ad infinitum
 
-If I pass (0, -1) through `H` repeatedly:
+If I pass
+$$
+    \begin{pmatrix}
+    0\\
+    -1\\
+    \end{pmatrix}
+$$ through `H` repeatedly:
 
-1. I get (-a, a)
-2. Next, I get (0, -1)
-3. Next, I get (-a, a)
+1. I get
+$$
+    \begin{pmatrix}
+    -a\\
+    a\\
+    \end{pmatrix}
+$$
+2. Next, I get
+$$
+    \begin{pmatrix}
+    0\\
+    -1\\
+    \end{pmatrix}
+$$
+3. Next, I get
+$$
+    \begin{pmatrix}
+    -a\\
+    a\\
+    \end{pmatrix}
+$$
+ad infinitum
 
-What all this is telling me is, there is an upper limit to the number of states each vector can take. So far, I have only seen the following values: -a, a, -1, 1, 0.\
+What all this is telling me is, there is an upper limit to the number of states each vector can take. So far, I have only seen the following values:  
+$$\begin{pmatrix}-a, & a, & -1, & 1, & 0\end{pmatrix}$$  
+
 Mathematically, if there are 2 coordinates, and 5 possible values that these vectors can take, that means that the upper limit is 25 permutations.\
 Drawing out the possibilities on a 5x5 grid and crossing out impossible permutations, I got 8 possible states.
 
@@ -80,13 +217,27 @@ Flag: `8`
 
 ---
 
-### Question 2: Make a circuit [50 points]
+# Question 2: Make a circuit [50 points]
 
-Provide a circuit (a series of operations) that transforms the ![Quantum%20Snacks%2070b44c71164b4df1b99dbcb625bd03d3/Untitled%206.png](/images/Quantum-Snacks-images/Untitled6.png) state to the ![Quantum%20Snacks%2070b44c71164b4df1b99dbcb625bd03d3/Untitled%207.png](/images/Quantum-Snacks-images/Untitled7.png) state, only using the H and X operations. A possible (wrong) answer is HHXHXHXH.
+Provide a circuit (a series of operations) that transforms the
+$$
+    \begin{pmatrix}
+    1\\
+    0\\
+    \end{pmatrix}
+$$
+state to the
+$$
+    \begin{pmatrix}
+    -1\\
+    0\\
+    \end{pmatrix}
+$$
+state, only using the `H` and `X` operations. A possible (wrong) answer is `HHXHXHXH`.
 
 ---
 
-### Solving the challenge: Part 2
+# Solving the challenge: Part 2
 
 Hey! looks like explaining the logic gates in simple English was a good thing. Now, this should be easy to figure out.
 
@@ -96,14 +247,54 @@ A refresher:
 
 Now, to solve this challenge:
 
-*Note: (top, bottom) is the way i have structured the vectors*
-
-- Start vector: (1,0)
-- `X` = (0,1)
-- `XH` = (a, -a)
-- `XHX` = (-a, a)
-- `XHXH` = (0, -1)
-- `XHXHX` = (-1, 0)
+- `Start vector`
+$$
+    =
+    \begin{pmatrix}
+    1\\
+    0\\
+    \end{pmatrix}
+$$
+- `X`
+$$
+    =
+    \begin{pmatrix}
+    0\\
+    1\\
+    \end{pmatrix}
+$$
+- `XH`
+$$
+    =
+    \begin{pmatrix}
+    a\\
+    -a\\
+    \end{pmatrix}
+$$
+- `XHX`
+$$
+    =
+    \begin{pmatrix}
+    -a\\
+    a\\
+    \end{pmatrix}
+$$
+- `XHXH`
+$$
+    =
+    \begin{pmatrix}
+    0\\
+    -1\\
+    \end{pmatrix}
+$$
+- `XHXHX`
+$$
+    =
+    \begin{pmatrix}
+    -1\\
+    0\\
+    \end{pmatrix}
+$$
 
 Got the flag!
 
@@ -111,19 +302,47 @@ Flag: `CTF{quantum_circuit_master}`
 
 ---
 
-### Question 3: Short circuit [50 points]
+# Question 3: Short circuit [50 points]
 
 Same as question 2 but now provide the shortest circuit possible (minimal number of gates). You are allowed to use `H`, `X` and `Z`.
 
 ---
 
-### Solving the challenge: Part 3
+# Solving the challenge: Part 3
 
 Great! This looks simple enough:
 
-- (1,0)
-- `X` = (0,1)
-- `XZ` = (0, -1)
-- `XZX` = (-1, 0)
+- `Start vector`
+$$
+    =
+    \begin{pmatrix}
+    1\\
+    0\\
+    \end{pmatrix}
+$$
+- `X`
+$$
+    =
+    \begin{pmatrix}
+    0\\
+    1\\
+    \end{pmatrix}
+$$
+- `XZ`
+$$
+    =
+    \begin{pmatrix}
+    0\\
+    -1\\
+    \end{pmatrix}
+$$
+- `XZX`
+$$
+    =
+    \begin{pmatrix}
+    -1\\
+    0\\
+    \end{pmatrix}
+$$
 
 Flag: `XZX`
