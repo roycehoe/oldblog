@@ -76,7 +76,7 @@ What all this is telling me is, there is an upper limit to the amount of states 
 Mathematically, if there are 2 coordinates, and 5 possible values that these vectors can take, that means that the upper limit is 25 permutations.\
 Drawing out the possibilities on a 5x5 grid and crossing out impossible permutations, I got 8 possible states.
 
-Flag: 8
+Flag: `8`
 
 ---
 
@@ -107,7 +107,7 @@ Now, to solve this challenge:
 
 Got the flag!
 
-Flag: CTF{quantum_circuit_master}
+Flag: `CTF{quantum_circuit_master}`
 
 ---
 
@@ -126,4 +126,4 @@ Great! This looks simple enough:
 - `XZ` = (0, -1)
 - `XZX` = (-1, 0)
 
-Flag: XZX
+Flag: `XZX`

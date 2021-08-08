@@ -34,7 +34,7 @@ I see the word `Flying_sau`. Is that short for `Flying_saucer`? Let me try that.
 
 Oh, it unexpectedly worked. Looks like this is the key for the second part of the challenge.
 
-Flag: CTF{Flying_saucer}
+Flag: `CTF{Flying_saucer}`
 
 After doing a little research, it turns out that the sliders actually indicate layers of scaffolding. Interestingly, 3D printers print objects by stacking 2D layers upon layers till the 3D object is created. As it turns out, one of the layers happens to be the flag. Now to solve the first part of the challenge.
 
@@ -63,7 +63,7 @@ Looking at the end of the `.gcode` file, I find this:
 I have a hunch that this metadata contains the model which "manufactured" the flag.\
 Great! As it turns out, [geeetech A10M](https://www.google.com/search?q=geeetech+A10M&sxsrf=ALeKk02ISVd9VWKTdzgK3jVnd7WqGn-ZJA:1627394661107&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiAqrzFtYPyAhXVZSsKHd2uAJIQ_AUoAXoECAEQAw&biw=956&bih=955) is the name of the model.
 
-Flag: geeetech A10M
+Flag: `geeetech A10M`
 
 ---
 # Interesting things to note
