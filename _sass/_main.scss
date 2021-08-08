@@ -163,6 +163,7 @@ body {
 a {
 	color: var(--link-color);
 	text-decoration: none;
+    hover: #4fff92;
 }
 
 .post p {
@@ -494,9 +495,12 @@ color: #333;
 
 #search-results {
 
-  text-align: center;
+  text-align: left;
   li {
-    text-align: center;
+    text-align: left;
+    list-style-type: none;
+    margin-left: 0rem;
+    }
   }
 }
 
