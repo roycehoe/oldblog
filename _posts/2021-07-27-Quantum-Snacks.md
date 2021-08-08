@@ -31,7 +31,7 @@ Considering only these 3 logic gates, and starting in the ![Quantum%20Snacks%207
 
 ### Introduction: Part 1
 
-A tl:dr summary of the challenge information:
+A tl;dr summary of the challenge information:
 
 1. There are 3 logic gates: X, Z and H.
 2. Each logic gate has a 2x2 vector tied to it
@@ -58,7 +58,7 @@ If I pass (1,0) through `H` repeatedly:
 
 1. I get (a, a)
 2. Next, I get (1,0)
-3. Next, I get (a, a) ad inifitum
+3. Next, I get (a, a) ad infinitum
 
 If I pass (0,1) through `H` repeatedly:
 
@@ -72,7 +72,7 @@ If I pass (0, -1) through `H` repeatedly:
 2. Next, I get (0, -1)
 3. Next, I get (-a, a)
 
-What all this is telling me is, there is an upper limit to the amount of states each vector can take. So far, I have only seen the following values: -a, a, -1, 1, 0.\
+What all this is telling me is, there is an upper limit to the number of states each vector can take. So far, I have only seen the following values: -a, a, -1, 1, 0.\
 Mathematically, if there are 2 coordinates, and 5 possible values that these vectors can take, that means that the upper limit is 25 permutations.\
 Drawing out the possibilities on a 5x5 grid and crossing out impossible permutations, I got 8 possible states.
 
@@ -88,7 +88,7 @@ Provide a circuit (a series of operations) that transforms the ![Quantum%20Snack
 
 ### Solving the challenge: Part 2
 
-Hey! looks like explaining the logic gates in simple English was a good thing. Now this should be easy to figure out.
+Hey! looks like explaining the logic gates in simple English was a good thing. Now, this should be easy to figure out.
 
 A refresher:
 1. `X` flips the top vector to the bottom vector.

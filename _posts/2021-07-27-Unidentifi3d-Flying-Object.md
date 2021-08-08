@@ -36,7 +36,7 @@ Oh, it unexpectedly worked. Looks like this is the key for the second part of th
 
 Flag: `CTF{Flying_saucer}`
 
-After doing a little research, it turns out that the sliders actually indicate layers of scaffolding. Interestingly, 3D printers print objects by stacking 2D layers upon layers till the 3D object is created. As it turns out, one of the layers happens to be the flag. Now to solve the first part of the challenge.
+After doing a little research, it turns out that the sliders indicate layers of scaffolding. Interestingly, 3D printers print objects by stacking 2D layers upon layers till the 3D object is created. As it turns out, one of the layers happens to be the flag. Now to solve the first part of the challenge.
 
 # Solving the challenge: Part 2
 
@@ -67,7 +67,7 @@ Flag: `geeetech A10M`
 
 ---
 # Interesting things to note
-- This may be the first flag I have found that actually contains a space instead of an underscore
+- This may be the first flag I have found that contains a space instead of an underscore
 - I just want to acknowledge the little inside joke that the admins were trying to reference. Because who built the pyramids?
 
 ![Unidentifi3d%20Flying%20Object%209005dd557a584ec9a532e1b7f72d94e7/Untitled%202.png](/images/Unidentifi3d-Flying-Object-images/meme.png)
