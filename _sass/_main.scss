@@ -193,7 +193,7 @@ a {
     color: var(--tag-color);
     background-color: var(--code-bg-color);
     font-size: 0.8rem;
-    font-family: "Iosevka Regular", monospace;
+    font-family: "Iosevka", monospace;
     border-radius: 3px;
     padding-right: 10px;
     padding-left: 10px;
@@ -207,7 +207,7 @@ code,
 pre {
 	background: var(--code-bg-color);
 	border-width: 1px;
-    font-family: "Iosevka Regular", monospace;
+    font-family: "Iosevka", monospace;
 }
 
 code {
