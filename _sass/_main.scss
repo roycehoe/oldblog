@@ -495,6 +495,9 @@ figcaption {
 
 .bio {
 	margin-bottom: 3rem;
+    a {
+    color: var(--date-color);
+    }
 }
 
 ::selection {
@@ -505,6 +508,7 @@ color: #333;
 
 .search-article {
   position: relative;
+
  
 
   label[for="search-input"] {
