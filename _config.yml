@@ -1,11 +1,10 @@
-site: Gesko
-title: Gesko
-description: >-
-  just a minimalist, personal blog
+site: fancybinary
+title: fancybinary
+description: 'hello world i guess...'
 googlewebfonts: Fira+Code:wght@400;500;700
 lang: en-US
 timezone: Rome
-repo: https://github.com/p0wex/Gesko # site repo [optional]
+repo: https://github.com/roycehoe/
 data-theme: dark # default theme "dark" | "light"
 
 author:
@@ -17,9 +16,9 @@ author:
   email: your-email@email.com # email adress
 
 # URL settings
-url: "https://powex.ml" #
-baseurl: "/Gesko" # leave blank if not wishd
-permalink: "https://powex.ml/Gesko/"
+url: "https://roycehoe.github.io" #
+baseurl: "" # leave blank if not wishd
+date_format: "%b %-d, %Y"
 permalink: pretty 
 
 
